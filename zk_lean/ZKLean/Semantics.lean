@@ -3,11 +3,11 @@ import Init.Data.Array.Set
 import Init.Prelude
 import Mathlib.Algebra.Field.Defs
 
-import ZkLean.AST
-import ZkLean.Builder
-import ZkLean.SimpSets
+import ZKLean.AST
+import ZKLean.Builder
+import ZKLean.SimpSets
 
-/-- Class for Fields with additional properties necessary for ZkLean -/
+/-- Class for Fields with additional properties necessary for ZKLean -/
 class ZKField (f: Type) extends Field f, BEq f, Inhabited f, LawfulBEq f, Hashable f where
   -- Mask the lower `num_bits` of a field element and convert to a vector of bits.
   field_to_bits {num_bits: Nat} (val: f) : Vector f num_bits
@@ -79,7 +79,7 @@ def semantics_ram [ZKField f]
   (ram_ops: Array (RamOp f))
   : Option (RamOpsEval f) := do
   -- Let's create the empty environment
-  let empty_env: RamEnv f := Array.replicate ram_sizes.size (Std.HashMap.emptyWithCapacity 0);
+  let empty_env: RamEnv f := Array.mkArray ram_sizes.size (Std.HashMap.empty);
 
   -- For every RAM operation, update the RAM environment and the list of evaluated operations
   let res <- Array.foldlM  (λ (env, ops_eval) ram_op =>

@@ -1,6 +1,6 @@
 import Mathlib.Algebra.Field.Defs
-import ZkLean.LookupTable
 
+import ZKLean.LookupTable
 
 /-- Type to identify witness variables -/
 abbrev WitnessId := Nat

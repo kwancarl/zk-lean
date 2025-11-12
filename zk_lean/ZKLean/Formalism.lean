@@ -1,10 +1,10 @@
 import Mathlib.Control.Traversable.Basic
 import Std.Do
 
-import ZkLean.AST
-import ZkLean.Builder
-import ZkLean.LookupTable
-import ZkLean.Semantics
+import ZKLean.AST
+import ZKLean.Builder
+import ZKLean.LookupTable
+import ZKLean.Semantics
 
 /-- Run a circuit builder given an initial builder state and then evaluate the resulting circuit given witnesses. -/
 @[simp_ZKSemantics]

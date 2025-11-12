@@ -1,10 +1,11 @@
-import Std.Do
 import Std.Data.HashMap.Basic
+import Std.Do
+import Std.Tactic.Do
 
-import ZkLean.AST
-import ZkLean.FreeMonad
-import ZkLean.LookupTable
-import ZkLean.SimpSets
+import ZKLean.AST
+import ZKLean.FreeMonad
+import ZKLean.LookupTable
+import ZKLean.SimpSets
 
 /-- Type for RAM operations (Read and Write) -/
 inductive RamOp (f : Type) where

@@ -1,4 +1,4 @@
-import ZkLean.Interleaving
+import ZKLean.Interleaving
 
 /-- Type for subtables, the building blocks to construct lookup tables.
 
